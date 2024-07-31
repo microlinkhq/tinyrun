@@ -1,0 +1,11 @@
+Run multiple commands in parallel.
+
+Usage
+  $ tinyrun [options]<commands...>
+
+Options
+  --names List of custom names for the commands.
+
+Examples
+  $ tinyrun --names "HTTP" "node examples/server.js"
+  $ tinyrun "npm run dev" "npm run build"
