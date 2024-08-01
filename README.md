@@ -52,6 +52,6 @@ Check [how CLI is implemented](/bin/index.js) to see how it's interacting with t
 ## License
 
 **tinyrun** © [Kiko Beats](https://kikobeats.com), released under the [MIT](https://github.com/kikobeats/tinyrun/blob/master/LICENSE.md) License.<br>
-Authored and maintained by [Kiko Beats](https://kikobeats.com) with help from [contributors](https://github.com/kikobeats/tinyrun/contributors).
+Inspired by [Stanko Tadić](https://muffinman.io/blog/node-script-to-run-multiple-commands-in-parallel/). Authored and maintained by [Kiko Beats](https://kikobeats.com) with help from [contributors](https://github.com/kikobeats/tinyrun/contributors).
 
 > [kikobeats.com](https://kikobeats.com) · GitHub [Kiko Beats](https://github.com/kikobeats) · Twitter [@kikobeats](https://twitter.com/kikobeats)
