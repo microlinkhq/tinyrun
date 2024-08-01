@@ -9,7 +9,7 @@
 [![Coverage Status](https://img.shields.io/coveralls/kikobeats/tinyrun.svg?style=flat-square)](https://coveralls.io/github/kikobeats/tinyrun)
 [![NPM Status](https://img.shields.io/npm/dm/tinyrun.svg?style=flat-square)](https://www.npmjs.org/package/tinyrun)
 
-**tinyrun** runs multiple commands in parallel with minimal footprint (~2KB).
+**tinyrun** executes multiple commands in parallel with minimal footprint (~2KB).
 
 It can run one-off commands:
 

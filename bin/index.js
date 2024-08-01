@@ -68,9 +68,11 @@ const exit = ({ exitCode, signalCode, duration }, task) => {
   )
 }
 
-require('tinyrun')(tasks, {
+require('tinyrun')({
+  tasks,
   stdout,
   stderr: toStream(process.stderr),
   start,
-  exit
+  exit,
+  childOpts: { shell: true }
 })

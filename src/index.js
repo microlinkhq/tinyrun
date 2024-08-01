@@ -7,21 +7,21 @@ const forwardSignals = subprocess =>
     process.on(signal, () => subprocess.kill(signal))
   })
 
-module.exports = (tasks, streams) =>
+module.exports = ({ tasks, childOpts, start, exit, ...pipes }) =>
   Promise.all(
     tasks.map(task => {
-      const subprocess = require('tinyspawn')(task.cmd, { shell: true })
-      streams.start(subprocess, task)
+      const subprocess = require('tinyspawn')(task.cmd, childOpts)
+      start(subprocess, task)
       subprocess.catch(() => {})
 
       const duration = timeSpan()
 
       ;['stdout', 'stderr'].forEach(pipe =>
-        subprocess[pipe].on('data', data => streams[pipe](data, task))
+        subprocess[pipe].on('data', data => pipes[pipe](data, task))
       )
 
-      subprocess.on('exit', exitCode => {
-        streams.exit(
+      subprocess.once('exit', async exitCode => {
+        exit(
           { exitCode, signalCode: subprocess.signalCode, duration: duration() },
           task
         )
