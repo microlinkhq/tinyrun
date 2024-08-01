@@ -45,7 +45,7 @@
     "github-generate-release": "latest",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
-    "pretty-ms": "7",
+    "pretty-ms": "9",
     "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
