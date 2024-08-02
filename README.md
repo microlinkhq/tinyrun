@@ -5,8 +5,8 @@
   <br>
 </div>
 
-![Last version](https://img.shields.io/github/tag/kikobeats/tinyrun.svg?style=flat-square)
-[![Coverage Status](https://img.shields.io/coveralls/kikobeats/tinyrun.svg?style=flat-square)](https://coveralls.io/github/kikobeats/tinyrun)
+![Last version](https://img.shields.io/github/tag/microlinkhq/tinyrun.svg?style=flat-square)
+[![Coverage Status](https://img.shields.io/coveralls/microlinkhq/tinyrun.svg?style=flat-square)](https://coveralls.io/github/microlinkhq/tinyrun)
 [![NPM Status](https://img.shields.io/npm/dm/tinyrun.svg?style=flat-square)](https://www.npmjs.org/package/tinyrun)
 
 **tinyrun** executes multiple commands in parallel with minimal footprint (~2KB).
@@ -51,7 +51,7 @@ Check [how CLI is implemented](/bin/index.js) to see how it's interacting with t
 
 ## License
 
-**tinyrun** © [Kiko Beats](https://kikobeats.com), released under the [MIT](https://github.com/kikobeats/tinyrun/blob/master/LICENSE.md) License.<br>
-Inspired by [Stanko Tadić](https://muffinman.io/blog/node-script-to-run-multiple-commands-in-parallel/). Authored and maintained by [Kiko Beats](https://kikobeats.com) with help from [contributors](https://github.com/kikobeats/tinyrun/contributors).
+**tinyrun** © [Kiko Beats](https://kikobeats.com), released under the [MIT](https://github.com/microlinkhq/tinyrun/blob/master/LICENSE.md) License.<br>
+Inspired by [Stanko Tadić](https://muffinman.io/blog/node-script-to-run-multiple-commands-in-parallel/). Authored and maintained by [Kiko Beats](https://kikobeats.com) with help from [contributors](https://github.com/microlinkhq/tinyrun/contributors).
 
 > [kikobeats.com](https://kikobeats.com) · GitHub [Kiko Beats](https://github.com/kikobeats) · Twitter [@kikobeats](https://twitter.com/kikobeats)
