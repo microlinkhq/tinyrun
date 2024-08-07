@@ -32,7 +32,7 @@ HTTP cmd='node examples/server.js' exitCode=0 signalCode=null duration=2s
 ## Install
 
 ```bash
-$ npm install tinyrun --global
+npm install tinyrun --global
 ```
 
 ## Usage
