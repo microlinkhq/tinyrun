@@ -58,10 +58,15 @@ test('prefixing handles line segments', t => {
   program = `node -e "${program}"`
   program = program.replace(/"/g, '\\"')
 
-  const stdout = execSync(`./bin/index.js "${program}" --names "foo"`, {
+  let stdout = execSync(`./bin/index.js "${program}" --names "foo"`, {
     encoding: 'utf-8',
     stdio: 'pipe'
   })
+
+  // strip pid from stdout
+  stdout = stdout.replace(/pid=\d+/gm, 'pid=0')
+  // strip ansi from stdout
+  stdout = stdout.replace(/\u001b\[\d+m/g, '') // eslint-disable-line
 
   t.snapshot(stdout)
 })
