@@ -18,17 +18,13 @@ const prettyMs = ms => {
   return `${minutes}m ${remainingSeconds.toFixed(2)}s`
 }
 
-const toStream =
-  stream =>
-    (data, { name }) =>
-      stream.write(split(data, name))
-
-const split = (text, prefix) =>
-  text
-    .toString()
-    .split('\n')
-    .map(line => (line ? `${prefix} ${line}` : ''))
-    .join('\n')
+const toStream = stream => (data, task) => {
+  const lines = (task.buffer += data.toString()).split('\n')
+  if (data.length) task.buffer = lines.pop() || ''
+  for (const line of lines) {
+    stream.write(task.name + (line ? ` ${line}` : '') + '\n')
+  }
+}
 
 const { _, ...flags } = require('mri')(process.argv.slice(2))
 
@@ -46,7 +42,8 @@ if (Array.isArray(names) && names.length > 0) {
 
 const tasks = _.map((cmd, index) => ({
   cmd,
-  name: styleText(getColor(index), names?.[index] ?? `[${index}]`)
+  name: styleText(getColor(index), names?.[index] ?? `[${index}]`),
+  buffer: ''
 }))
 
 const stdout = toStream(process.stdout)

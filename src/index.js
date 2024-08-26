@@ -17,7 +17,9 @@ module.exports = ({ tasks, childOpts, start, exit, ...pipes }) =>
       const duration = timeSpan()
 
       ;['stdout', 'stderr'].forEach(pipe =>
-        subprocess[pipe].on('data', data => pipes[pipe](data, task))
+        subprocess[pipe]
+          .on('data', data => pipes[pipe](data, task))
+          .on('end', () => pipes[pipe]('', task))
       )
 
       subprocess.once('exit', async exitCode => {
