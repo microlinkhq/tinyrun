@@ -42,3 +42,26 @@ test('run multiple tasks', async t => {
   t.is(resolved[1].subprocess.stdout, 'bar')
   t.true(durations[1].duration >= 1000)
 })
+
+test('prefixing handles line segments', t => {
+  const { execSync } = require('child_process')
+
+  let program = `
+    process.stdout.write('hello ', () => {
+      process.stdout.write('world\\n', () => {
+        process.stdout.write('nice to meet you')
+      })
+    })
+  `
+
+  program = program.replace(/\\/g, '\\\\')
+  program = `node -e "${program}"`
+  program = program.replace(/"/g, '\\"')
+
+  const stdout = execSync(`./bin/index.js "${program}" --names "foo"`, {
+    encoding: 'utf-8',
+    stdio: 'pipe'
+  })
+
+  t.snapshot(stdout)
+})
