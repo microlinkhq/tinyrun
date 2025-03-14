@@ -2,7 +2,7 @@
   "name": "tinyrun",
   "description": "Run multiple commands in parallel",
   "homepage": "https://github.com/microlinkhq/tinyrun",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "exports": {
     ".": "./src/index.js"
   },
