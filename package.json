@@ -38,7 +38,7 @@
   "dependencies": {
     "@kikobeats/time-span": "~1.0.5",
     "mri": "~1.2.0",
-    "tinyspawn": "~1.3.2"
+    "tinyspawn": "~1.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
