@@ -3,8 +3,12 @@
   "description": "Run multiple commands in parallel",
   "homepage": "https://github.com/microlinkhq/tinyrun",
   "version": "1.0.8",
+  "types": "index.d.ts",
   "exports": {
-    ".": "./src/index.js"
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./src/index.js"
+    }
   },
   "bin": {
     "tinyrun": "bin/index.js"
@@ -62,7 +66,8 @@
   },
   "files": [
     "bin",
-    "src"
+    "src",
+    "index.d.ts"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
