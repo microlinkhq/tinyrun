@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.1.0 (2026-03-04)
+
+
+### Features
+
+* **types:** add TypeScript type definitions ([d792a91](https://github.com/microlinkhq/tinyrun/commit/d792a91822cd601d25fe7b925f409c74f9bf7742))
+
 ### 1.0.8 (2025-11-22)
 
 ### 1.0.7 (2025-10-14)
