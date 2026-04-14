@@ -39,17 +39,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          fetch-depth: 2
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: lts/*
       - name: Setup PNPM
-        uses: pnpm/action-setup@v5
+        uses: pnpm/action-setup@v6
         with:
           version: latest
-          run_install: true
+      - name: Install
+        run: pnpm install --ignore-scripts
       - name: Test
         run: pnpm test
       - name: Report
