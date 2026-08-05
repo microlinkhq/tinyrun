@@ -1,6 +1,6 @@
 {
   "name": "tinyrun",
-  "description": "Run multiple commands in parallel",
+  "description": "Run multiple shell commands in parallel with a tiny concurrently-style CLI.",
   "homepage": "https://github.com/microlinkhq/tinyrun",
   "version": "1.1.4",
   "types": "index.d.ts",
@@ -37,11 +37,15 @@
   },
   "keywords": [
     "bash",
-    "command",
+    "cli",
+    "commands",
     "concurrent",
     "concurrently",
+    "npm-scripts",
     "parallel",
-    "sh"
+    "process",
+    "run",
+    "shell"
   ],
   "dependencies": {
     "@kikobeats/time-span": "~1.0.5",
