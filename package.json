@@ -2,7 +2,7 @@
   "name": "tinyrun",
   "description": "Run multiple shell commands in parallel with a tiny concurrently-style CLI.",
   "homepage": "https://github.com/microlinkhq/tinyrun",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "types": "index.d.ts",
   "exports": {
     ".": {
